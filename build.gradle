@@ -1,0 +1,21 @@
+plugins {
+    id 'java-gradle-plugin'
+}
+
+group = 'com.demarco.flatpak'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+gradlePlugin {
+    plugins {
+        flatpakGenerator {
+            id = 'com.demarco.flatpak-generator'
+            implementationClass = 'com.demarco.flatpak.FlatpakGeneratorPlugin'
+        }
+    }
+}
+
+
